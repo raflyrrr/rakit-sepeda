@@ -5,7 +5,7 @@
 			</a>
 
 			<a class="brand" href="todays-orders.php">
-				Rakitbersama
+				Rakitsepeda
 			</a>
 
 			<div class="nav-collapse collapse navbar-inverse-collapse">

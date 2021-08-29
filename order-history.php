@@ -88,7 +88,12 @@ if (strlen($_SESSION['login']) == 0) {
 													<td class="cart-product-sub-total"><?php echo $row['odate']; ?> </td>
 
 													<td>
-													<?php echo $row['orstatus'] ?>
+														<?php if ($row['orstatus']  == 'Belum Diproses') {
+														?>
+															<a href="https://api.whatsapp.com/send?phone=6282114035647&text=Halo%2C%20saya%20ingin%20mengkonfirmasi%20pembayaran%20dengan%20Nama%20Produk:%20<?php echo $row['pname']?>%2C%20Total%20pembayaran%3A%20Rp.<?php echo number_format( $row['pprice']) ?>%2C%20Alamat:%20" class="btn btn-success" target="_blank"><i class="fab fa-whatsapp"></i> Konfirmasi Pembayaran</a>
+														<?php } else {
+															echo $row['orstatus'];
+														} ?>
 													</td>
 												</tr>
 											<?php $cnt = $cnt + 1;
